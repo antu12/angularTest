@@ -1,0 +1,22 @@
+<div class="container">
+		<ul class="list-unstyled">
+			<li class="appointment" ng-repeat="car in cars">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="media">
+							<div class="media-left media-middle">
+								<img class="media-object" src="images/car_pic.jpg" alt="car_img" style="width: auto; height:150px">
+							</div>
+							<div class="media-body">
+								<h3 class="media-heading">{{car.brand}}</h3>
+								<p>License: {{car.licensePlate}}</p>
+								<p>Serial: {{car.serialNumber}}</p>
+							</div>
+							<button class="btn btn-info pull-right" ng-click="go2branch(car)">Next</button>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		
+	</div>

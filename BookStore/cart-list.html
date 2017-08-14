@@ -1,0 +1,31 @@
+<div class="container">
+		<h4>Click on buy button to buy the book.</h4>
+		<ul class="list-unstyled">
+			<li class="book" ng-repeat="book in cart">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="media">
+							<div class="media-left media-middle">
+								<a href="#">
+									<img class="media-object" src="{{book.cover}}" alt="cover_img" style="width: auto; height:150px">
+								</a>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">{{book.title}}</h4>
+								<p>{{book.price | currency:'BDT.'}}</p>
+								<ul class="list-unstyled list-inline">
+									<li>Rating: {{book.rating}}</li>
+									<li>Binding: {{book.binding}}</li>
+									<li>Publisher: {{book.publisher | uppercase}}</li>
+									<li>Released: {{book.releaseDate}}</li>
+								</ul>
+								<p>{{book.details}}</p>
+								<button class="btn btn-info pull-right" ng-click="buy(book)">Buy</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		
+	</div>

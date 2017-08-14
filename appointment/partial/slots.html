@@ -1,0 +1,82 @@
+<div class="container">
+	<div class="month">      
+		<ul>
+			<li class="prev">&#10094;</li>
+			<li class="next">&#10095;</li>
+			<li style="text-align:center">
+				August<br>
+				<span style="font-size:18px">2016</span>
+			</li>
+		</ul>
+	</div>
+
+	<ul class="weekdays">
+		<li>Mo</li>
+		<li>Tu</li>
+		<li>We</li>
+		<li>Th</li>
+		<li>Fr</li>
+		<li>Sa</li>
+		<li>Su</li>
+	</ul>
+
+	<ul class="days">  
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">1</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">2</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">3</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">4</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">5</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">6</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">7</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">8</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">9</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">10</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">11</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">12</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">13</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">14</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">15</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">16</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">17</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">18</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">19</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">20</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">21</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">22</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">23</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">24</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">25</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">26</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">27</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">28</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">29</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">30</button></li>
+		<li><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black btn">31</button></li>
+	</ul>
+</div>
+
+
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <ul class="list-unstyled">
+				<li class="appointment" ng-repeat="slot in slots">
+					<div class="panel panel-default" style="margin: 30px;">
+						<div class="panel-body">
+							<div class="media">
+								<div class="media-body">
+								<h4>Start: {{slot.startDate}} End: {{slot.endDate}}</h4>
+								<p>Free Slot: {{slot.freeSlots}}</p>
+								</div>
+								<button class="btn btn-info pull-right" ng-click="appDone(slot)">Make Appointment</button>
+							</div>
+						</div>
+						
+					</div>
+				</li>
+			</ul>
+      </div>
+    </div>
+  </div>
+</div>

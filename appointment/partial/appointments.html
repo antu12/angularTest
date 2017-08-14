@@ -1,0 +1,29 @@
+<div class="container">
+		<ul class="list-unstyled">
+			<li class="appointment" ng-repeat="appointment in appointments">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="media">
+							<div class="media-left media-middle">
+								<p>{{appointment.timeslot.startDate}}-{{appointment.timeslot.endDate}}</p>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">{{appointment.car.brand}}</h4>
+								<ul class="list-unstyled list-inline">
+									<li>License: {{appointment.car.licensePlate}}</li>
+									<li>Serial: {{appointment.car.serialNumber}}</li>
+								</ul>
+								<h4 class="media-heading">Branch: {{appointment.branch.branchName}}</h4>
+								<ul class="list-unstyled list-inline">
+									<li>Address: {{appointment.branch.branchInformations.city}}, {{appointment.branch.branchInformations.street}}</li>
+									<li>Phone: {{appointment.branch.branchInformations.phone}}</li>
+									<li>Company: {{appointment.branch.companyNr}}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<button class="btn btn-info pull-right" ng-click="go('/cars')">Create New Appointment</button>
+	</div>

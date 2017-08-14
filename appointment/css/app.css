@@ -1,0 +1,54 @@
+.logo-wrapper{
+	margin: 20px;
+}
+.logo {
+    padding: 15px;
+    font-size: 35px;
+    font-family: fantasy;
+}
+
+.tagline {
+    font-size: 11px;
+    margin-left: -15px;
+    font-family: monospace;
+}
+
+.nav-wrapper {
+    margin: 20px;
+}
+
+.box.ng-enter{
+	-webkit-transition: 1s linear all;
+	-moz-transition:1s linear all;
+	-o-transition:1s linear all;
+	transition: 1s linear all;
+	opacity: 0;
+}
+.box.ng-enter-active{
+	opacity: 1;
+}
+
+.book.ng-enter{
+	-webkit-transition: 0.5s linear all;
+	-moz-transition:0.5s linear all;
+	-o-transition:0.5s linear all;
+	transition: 0.5s linear all;
+	opacity: 0;
+}
+.book.ng-enter-active{
+	opacity: 1;
+}
+.panel-body{
+	position: relative;
+}
+
+.book.ng-leave{
+	-webkit-transition: 0.5s linear all;
+	-moz-transition:0.5s linear all;
+	-o-transition:0.5s linear all;
+	transition: 0.5s linear all;
+	opacity: 1;
+}
+.book.ng-leave-active{
+	opacity: 0;
+}
