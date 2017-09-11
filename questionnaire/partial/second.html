@@ -1,0 +1,26 @@
+<div class="container">
+			<div class="pull-right price">
+            	{{price | currency}}
+            </div>
+		<div class="row">
+			<div class="col-md-12 ques">
+				<h2>What app you want?</h2>
+			</div>
+			<div class="choices">
+				<div class="col-md-4 text-center">
+					<button class="btn btn-info btn-circle btn-xl center" ng-click="go('/third',8000,2,'Email')"></button>
+					<span class="btn-sub clearfix">Email</span>
+				</div>
+				<div class="col-md-4 text-center">
+					<button class="btn btn-danger btn-circle btn-xl center" ng-click="go('/third',15000,2,'Social')"></button>
+					<span class="btn-sub clearfix">Social</span>
+				</div>
+				<div class="col-md-4 text-center">
+					<button class="btn btn-success btn-circle btn-xl center" ng-click="go('/third',10000,2,'Custom')"></button>
+					<span class="btn-sub clearfix">Custom</span>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>

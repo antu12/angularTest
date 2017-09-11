@@ -1,0 +1,26 @@
+<div class="container">
+			<div class="pull-right price">
+            	{{price | currency}}
+            </div>
+		<div class="row">
+			<div class="col-md-12 ques">
+				<h2>How Should it Generate Money?</h2>
+			</div>
+			<div class="choices">
+				<div class="col-md-4 text-center">
+					<button class="btn btn-info btn-circle btn-xl center" ng-click="go('/finish',5000,4,'Buy')"></button>
+					<span class="btn-sub clearfix">Buy</span>
+				</div>
+				<div class="col-md-4 text-center">
+					<button class="btn btn-danger btn-circle btn-xl center" ng-click="go('/finish',8000,4,'Inside buying')"></button>
+					<span class="btn-sub clearfix">Inside buying</span>
+				</div>
+				<div class="col-md-4 text-center">
+					<button class="btn btn-success btn-circle btn-xl center" ng-click="go('/finish',0,4,'Not Needed')"></button>
+					<span class="btn-sub clearfix">Not Needed</span>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
