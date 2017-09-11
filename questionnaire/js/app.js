@@ -81,6 +81,10 @@ app.factory('priceService', function() {
 			
 			return choices;
 		},
+		getAllPrice: function() {
+			
+			return price;
+		},
 		push: function(input,index,choice) {
 			price[index]=input;
 			choices[index]=choice;
@@ -94,6 +98,7 @@ app.factory('priceService', function() {
 app.controller('pageCtrl', function($scope, $location, priceService) {
 	// priceService.add();
 	$scope.price = priceService.getPrice();
+	$scope.allPrice = priceService.getAllPrice();
 	$scope.choices = priceService.getChoice();
 	console.log($scope.choices);
 
