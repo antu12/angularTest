@@ -1,6 +1,6 @@
 ## AngularJS practice Page
 
-These 3 projects are for angular js practice session.
+These 5 projects are for angular js practice session.
 
 1. [BookStore](BookStore)
 2. [GroceryList](GroceryList)
