@@ -1,0 +1,105 @@
+.logo-wrapper{
+	margin: 20px;
+}
+.logo {
+    padding: 15px;
+    font-size: 35px;
+    font-family: fantasy;
+}
+
+.tagline {
+    font-size: 11px;
+    margin-left: -15px;
+    font-family: monospace;
+}
+
+.nav-wrapper {
+    margin: 20px;
+}
+
+.box.ng-enter{
+	-webkit-transition: 1s linear all;
+	-moz-transition:1s linear all;
+	-o-transition:1s linear all;
+	transition: 1s linear all;
+	opacity: 0;
+}
+.box.ng-enter-active{
+	opacity: 1;
+}
+
+.book.ng-enter{
+	-webkit-transition: 0.5s linear all;
+	-moz-transition:0.5s linear all;
+	-o-transition:0.5s linear all;
+	transition: 0.5s linear all;
+	opacity: 0;
+}
+.book.ng-enter-active{
+	opacity: 1;
+}
+.panel-body{
+	position: relative;
+}
+
+.book.ng-leave{
+	-webkit-transition: 0.5s linear all;
+	-moz-transition:0.5s linear all;
+	-o-transition:0.5s linear all;
+	transition: 0.5s linear all;
+	opacity: 1;
+}
+.book.ng-leave-active{
+	opacity: 0;
+}
+	
+.price {
+	margin: 5px;
+    padding: 5px;
+    font-size: 35px;
+}
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: auto;
+  min-width: 200px;
+  height: 150px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 40px;
+}
+.choices{
+	margin-top: 150px;
+}
+.ques{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.box.ng-enter{
+  -webkit-transition: 1s linear all;
+  -moz-transition:1s linear all;
+  -o-transition:1s linear all;
+  transition: 1s linear all;
+  opacity: 0;
+}
+.box.ng-enter-active{
+  opacity: 1;
+}

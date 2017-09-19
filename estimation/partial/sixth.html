@@ -1,0 +1,56 @@
+<div class="container">
+			<!-- <div class="pull-right price">
+            	{{price | currency}}
+            </div> -->
+		<div ng-if="choices[1]=='mobile'" class="row">
+			<div class="col-md-12">
+				<h4>1. In Which phase your project currently at? : "{{choices[2]}}"</h4>
+				<h4>2. What type of design do you need? : "{{choices[3]}}"</h4>
+				<h4>3. Do you need your users to sign in? : "{{choices[4]}}"</h4>
+				<h4>4. Do you need a payment system? : "{{choices[5]}}"</h4>
+			</div>
+			<div class="col-md-12 ques">
+				<h2>5. What is your platform?</h2>
+			</div>
+			<div class="choices">
+				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
+					<button class="btn btn-info btn-circle btn-xl center" ng-click="go('/seventh',5000,6,'Android')">Android</button>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
+					<button class="btn btn-danger btn-circle btn-xl center" ng-click="go('/seventh',6500,6,'IOS')">IOS</button>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
+					<button class="btn btn-success btn-circle btn-xl center" ng-click="go('/seventh',11000,6,'Android and IOS')">Android and IOS</button>
+				</div>
+			</div>
+			<div class="col-md-2 col-md-offset-10 col-sm-2 col-sm-offset-10 col-xs-2 col-xs-offset-10" style="padding-top: 40px;">
+				<button class="btn btn-default btn-lg" ng-click="go('/fifth')">Go Back</button>
+			</div>
+			
+		</div>
+
+		<div ng-if="choices[1]=='web'" class="row">
+			<div class="col-md-12">
+				<h4>1. How many pages do you need? : "{{choices[2]}}"</h4>
+				<h4>2. Do you need CMS? : "{{choices[3]}}"</h4>
+				<h4>3. Do you need your users to sign in? : "{{choices[4]}}"</h4>
+				<h4>4. Do users need a profile? : "{{choices[5]}}"</h4>
+			</div>
+			<div class="col-md-12 ques">
+				<h2>5. Do you need Search functionality?</h2>
+			</div>
+			<div class="choices">
+				<div class="col-md-6 col-sm-6 col-xs-6 text-center">
+					<button class="btn btn-info btn-circle btn-xl center" ng-click="go('/seventh',2500,6,'Yes')">Yes</button>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 text-center">
+					<button class="btn btn-danger btn-circle btn-xl center" ng-click="go('/seventh',0,6,'No')">No</button>
+				</div>
+			</div>
+			<div class="col-md-2 col-md-offset-10 col-sm-2 col-sm-offset-10 col-xs-2 col-xs-offset-10" style="padding-top: 40px;">
+				<button class="btn btn-default btn-lg" ng-click="go('/fifth')">Go Back</button>
+			</div>
+			
+		</div>
+		
+	</div>
