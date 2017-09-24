@@ -1,0 +1,43 @@
+<div class="container" style="width: 95%;">
+	<div class="row ">
+
+		<div class="col-md-8 col-sm-12 clearfix">
+			<div class="pull-left">
+				<button class="btn btn-default btn-lg glyphicon glyphicon-chevron-left" ng-click="go('/')"><em>Back</em></button>
+			</div>
+			<div class="pull-right">
+				<h2>WEB Developing Features</h2>
+				<p style="font-size: 18px;">Please select the features for your web developing idea and will provide an approximate cost for the development of your website using our proprietary estimation tool</p>
+			</div>
+			<ul class="list-unstyled">
+				<li ng-repeat="item in items" class=" col-md-3 col-sm-3 col-xs-3 text-center">
+					<div class="thumbnail" style="border: 0; ">
+						<button class="btn btn-default btn-circle btn-xl center {{item.icon}}" ng-class="{'active': item.status}" ng-click="toggle(item)" style="font-size: 60px;"></button>
+					<div><span style="font-size: 10px;width:100%;">{{item.name | uppercase}}</span></div>
+				</div>
+
+					
+		
+				</li>
+
+			</ul>
+		</div>
+
+		<div class="col-md-4 col-sm-12 clearfix">
+			<h3>Selected Features</h3><hr>
+			<ul class="list-unstyled">
+			<li ng-repeat="item in added" class="">
+				<div class="clearfix" style="font-size: 16px">
+					<span style="float: left;">{{item.name | uppercase}}</span>
+					<span style="float: right;">{{item.price | currency}}</span>
+					<hr>
+				</div>	
+			</li>
+			</ul>
+			<div style="font-size: 20px">
+				<span style="float: left;">Total:</span>
+				<span style="float: right;">USD: {{total}}</span>
+			</div>
+		</div>
+	</div>
+</div>
