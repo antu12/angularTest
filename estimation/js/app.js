@@ -105,7 +105,7 @@ app.factory('priceService', function() {
 				total = total+price[i];
 			}
 			var estimate = "";
-			if (total >= 5000 && total <= 10000) {
+			if (total >= 0 && total <= 10000) {
 				estimate = "$"+total + " - $" + (total+590);
 			} else if (total > 10000 && total <= 15000) {
 				estimate = "$"+total + " - $" + (total+1090);
