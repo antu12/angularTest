@@ -8,22 +8,26 @@
 			</div>
 
 			<div class="col-md-12 ques">
-				<h2>2. What type of design do you need?</h2>
+				<button class="pull-right btn btn-default btn-lg glyphicon glyphicon-chevron-left" ng-click="go('/second')"><em>Back</em></button>
+				<h2 class="pull-left">2. What type of design do you need?</h2>
 			</div>
 			<div class="choices">
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-info btn-circle btn-xl center" ng-click="go('/fourth',2000,3,'Simple')">Simple</button>
+					<button id="icn" class="btn btn-info btn-circle btn-xl center glyphicon glyphicon-th-large" ng-click="go('/fourth',2000,3,'Simple')"></button>
+					<span class="clearfix">Simple</span>
+
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-danger btn-circle btn-xl center" ng-click="go('/fourth',6500,3,'Fully customized')">Fully customized</button>
+					<button id="icn" class="btn btn-danger btn-circle btn-xl center glyphicon glyphicon-th-list" ng-click="go('/fourth',6500,3,'Fully customized')"></button>
+					<span class="clearfix">Fully customized</span>
+
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-success btn-circle btn-xl center" ng-click="go('/fourth',0,3,'Dont need a design')">Don't need a design</button>
+					<button id="icn" class="btn btn-success btn-circle btn-xl center  glyphicon glyphicon-align-left" ng-click="go('/fourth',0,3,'Dont need a design')"></button>
+					<span class="clearfix">Don't need a design</span>
 				</div>
 			</div>
-			<div class="col-md-2 col-md-offset-9 col-sm-2 col-sm-offset-9 col-xs-2 col-xs-offset-9" style="padding-top: 40px;">
-				<button class="btn btn-default btn-lg" ng-click="go('/second')">Go Back</button>
-			</div>
+			
 		</div>
 
 		<div ng-if="choices[1]=='web'" class="row">
@@ -32,19 +36,19 @@
 			</div>
 
 			<div class="col-md-12 ques">
-				<h2>2. Do you need CMS?</h2>
+				<button class="pull-right btn btn-default btn-lg glyphicon glyphicon-chevron-left" ng-click="go('/second')"><em>Back</em></button>
+				<h2 class="pull-left">2. Do you need CMS?</h2>
 			</div>
 			<div class="choices">
 				<div class="col-md-6 col-sm-6 col-xs-6 text-center">
-					<button class="btn btn-info btn-circle btn-xl center" ng-click="go('/fourth',2500,3,'Yes')">Yes</button>
+					<button id="icn" class="btn btn-info btn-circle btn-xl center glyphicon glyphicon-ok" ng-click="go('/fourth',2500,3,'Yes')"></button>
+					<span class="clearfix">Yes</span>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-6 text-center">
-					<button class="btn btn-danger btn-circle btn-xl center" ng-click="go('/fourth',0,3,'No')">No</button>
+					<button id="icn" class="btn btn-danger btn-circle btn-xl center glyphicon glyphicon-remove	" ng-click="go('/fourth',0,3,'No')"></button>
+					<span class="clearfix">No</span>
 				</div>
 				
-			</div>
-			<div class="col-md-2 col-md-offset-9 col-sm-2 col-sm-offset-9 col-xs-2 col-xs-offset-9 text-center " style="padding-top: 40px;">
-				<button class="btn btn-default btn-lg" ng-click="go('/second')">Go Back</button>
 			</div>
 			
 		</div>

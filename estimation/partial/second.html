@@ -3,43 +3,48 @@
             	{{price | currency}}
             </div> -->
 		<div ng-if="choices[1]=='mobile'" class="row">
+
+			
 			<div class="col-md-12 ques">
-				<h2>1. In Which phase your project currently at?</h2>
+				<button class="pull-right btn btn-default btn-lg glyphicon glyphicon-chevron-left" ng-click="go('/first')"><em>Back</em></button>
+			
+				<h2 class="pull-left">1. In Which phase your project currently at?</h2>
 			</div>
 			<div class="choices">
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-info btn-circle btn-xl center" ng-click="go('/third',3500,2,'Just idea')">Just idea</button>
+					<button id="icn" class="btn btn-info btn-circle btn-xl glyphicon glyphicon-pencil center" ng-click="go('/third',3500,2,'Just idea')"></button>
+					<span class="clearfix">Just Idea</span>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-danger btn-circle btn-xl center" ng-click="go('/third',2300,2,'I have design')">I have design</button>
+					<button id="icn" class="btn btn-danger btn-circle btn-xl center  glyphicon glyphicon-picture" ng-click="go('/third',2300,2,'I have design')"></button>
+					<span class="clearfix">I have design</span>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-success btn-circle btn-xl center" ng-click="go('/third',1800,2,'Already in development')">Already in development</button>
+					<button id="icn" class="btn btn-success btn-circle btn-xl center glyphicon glyphicon-cog" ng-click="go('/third',1800,2,'Already in development')"></button>
+					<span class="clearfix">Already in development</span>
 				</div>
-			</div>
-			<div class="col-md-2 col-md-offset-9 col-sm-2 col-sm-offset-9 col-xs-2 col-xs-offset-9" style="padding-top: 40px;">
-				<button class="btn btn-default btn-lg" ng-click="go('/first')">Go Back</button>
 			</div>
 			
 		</div>
 
 		<div ng-if="choices[1]=='web'" class="row">
 			<div class="col-md-12 ques">
-				<h2>1. How many pages do you need?</h2>
+				<button class="pull-right btn btn-default btn-lg glyphicon glyphicon-chevron-left" ng-click="go('/first')"><em>Back</em></button>
+				<h2 class="pull-left">1. How many pages do you need?</h2>
 			</div>
 			<div class="choices">
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-info btn-circle btn-xl center" ng-click="go('/third',850,2,'1 to 5')">1 to 5</button>
+					<button id="icn" class="btn btn-info btn-circle btn-xl center" ng-click="go('/third',850,2,'1 to 5')">1-5</button>
+					<span class="clearfix">1 to 5</span>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-danger btn-circle btn-xl center" ng-click="go('/third',1500,2,'6 to 10')">6 to 10</button>
+					<button id="icn" class="btn btn-danger btn-circle btn-xl center" ng-click="go('/third',1500,2,'6 to 10')">6-10</button>
+					<span class="clearfix">6 to 10</span>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-success btn-circle btn-xl center" ng-click="go('/third',2800,2,'10+')">10+</button>
+					<button id="icn" class="btn btn-success btn-circle btn-xl center" ng-click="go('/third',2800,2,'10+')">10+</button>
+					<span class="clearfix">10+</span>
 				</div>
-			</div>
-			<div class="col-md-2 col-md-offset-9 col-sm-2 col-sm-offset-9 col-xs-2 col-xs-offset-9" style="padding-top: 40px;">
-				<button class="btn btn-default btn-lg" ng-click="go('/first')">Go Back</button>
 			</div>
 			
 		</div>

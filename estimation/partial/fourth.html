@@ -8,21 +8,22 @@
 				<h4>2. What type of design do you need? : "{{choices[3]}}"</h4>
 			</div>
 			<div class="col-md-12 ques">
-				<h2>3. Do you need your users to sign in?</h2>
+				<button class="pull-right btn btn-default btn-lg glyphicon glyphicon-chevron-left" ng-click="go('/third')"><em>Back</em></button>
+				<h2 class="pull-left">3. Do you need your users to sign in?</h2>
 			</div>
 			<div class="choices">
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-info btn-circle btn-xl center" ng-click="go('/fifth',1100,4,'Email')">Email</button>
+					<button id="icn" class="btn btn-info btn-circle btn-xl center glyphicon glyphicon-envelope" ng-click="go('/fifth',1100,4,'Email')"></button>
+					<span class="clearfix">Email</span>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-danger btn-circle btn-xl center" ng-click="go('/fifth',1500,4,'Social Media')">Social Media</button>
+					<button id="icn" class="btn btn-danger btn-circle btn-xl center fa fa-user-circle " ng-click="go('/fifth',1500,4,'Social Media')"></button>
+					<span class="clearfix">Social Media</span>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-success btn-circle btn-xl center" ng-click="go('/fifth',0,4,'No need')">No need</button>
+					<button id="icn" class="btn btn-success btn-circle btn-xl center fa fa-ban" ng-click="go('/fifth',0,4,'No need')"></button>
+					<span class="clearfix">No need</span>
 				</div>
-			</div>
-			<div class="col-md-2 col-md-offset-9 col-sm-2 col-sm-offset-9 col-xs-2 col-xs-offset-9" style="padding-top: 40px;">
-				<button class="btn btn-default btn-lg" ng-click="go('/third')">Go Back</button>
 			</div>
 		</div>
 
@@ -32,21 +33,22 @@
 				<h4>2. Do you need CMS? : "{{choices[3]}}"</h4>
 			</div>
 			<div class="col-md-12 ques">
-				<h2>3. Do you need your users to sign in?</h2>
+				<button class="pull-right btn btn-default btn-lg glyphicon glyphicon-chevron-left" ng-click="go('/third')"><em>Back</em></button>
+				<h2 class="pull-left">3. Do you need your users to sign in?</h2>
 			</div>
 			<div class="choices">
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-info btn-circle btn-xl center" ng-click="go('/fifth',1100,4,'Email')">Email</button>
+					<button id="icn" class="btn btn-info btn-circle btn-xl center glyphicon glyphicon-envelope" ng-click="go('/fifth',1100,4,'Email')"></button>
+					<span class="clearfix">Email</span>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-danger btn-circle btn-xl center" ng-click="go('/fifth',1500,4,'Social')">Social Media</button>
+					<button id="icn" class="btn btn-danger btn-circle btn-xl center fa fa-user-circle" ng-click="go('/fifth',1500,4,'Social')"></button>
+					<span class="clearfix">Social Media</span>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-success btn-circle btn-xl center" ng-click="go('/fifth',0,4,'No')">No</button>
+					<button id="icn" class="btn btn-success btn-circle btn-xl center fa fa-ban" ng-click="go('/fifth',0,4,'No')"></button>
+					<span class="clearfix">No</span>
 				</div>
-			</div>
-			<div class="col-md-2 col-md-offset-9 col-sm-2 col-sm-offset-9 col-xs-2 col-xs-offset-9" style="padding-top: 40px;">
-				<button class="btn btn-default btn-lg" ng-click="go('/third')">Go Back</button>
 			</div>
 		</div>
 		

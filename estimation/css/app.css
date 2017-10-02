@@ -72,3 +72,21 @@
   opacity: 1;
 }
 
+#icn{
+  font-size: 60px;
+}
+
+.navbar{
+  height: 120px;
+  background-color: #ffffff;
+}
+body{
+  background-color: #F5F4F4;
+}
+.thumbnail{
+  background-color: #F5F4F4;
+}
+
+.btn{
+  /*color:#074774;*/
+}

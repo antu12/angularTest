@@ -11,21 +11,22 @@
 				<h4>5. What is your platform? : "{{choices[6]}}"</h4>
 			</div>
 			<div class="col-md-12 ques">
-				<h2>6. Need more additional feature?</h2>
+				<button class="pull-right btn btn-default btn-lg glyphicon glyphicon-chevron-left" ng-click="go('/sixth')"><em>Back</em></button>
+				<h2 class="pull-left">6. Need more additional feature?</h2>
 			</div>
 			<div class="choices">
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-info btn-circle btn-xl center" ng-click="go('/eighth',5000,7,'Yes')">Yes</button>
+					<button id="icn" class="btn btn-info btn-circle btn-xl center glyphicon glyphicon-ok" ng-click="go('/eighth',5000,7,'Yes')"></button>
+					<span class="clearfix">Yes</span>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-danger btn-circle btn-xl center" ng-click="go('/eighth',0,7,'No')">No</button>
+					<button id="icn" class="btn btn-danger btn-circle btn-xl center glyphicon glyphicon-remove" ng-click="go('/eighth',0,7,'No')"></button>
+					<span class="clearfix">No</span>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button class="btn btn-success btn-circle btn-xl center" ng-click="go('/eighth',2500,7,'I dont know')">I don't know</button>
+					<button id="icn" class="btn btn-success btn-circle btn-xl center fa fa-question-circle" ng-click="go('/eighth',2500,7,'I dont know')"></button>
+					<span class="clearfix">I don't know</span>
 				</div>
-			</div>
-			<div class="col-md-2 col-md-offset-9 col-sm-2 col-sm-offset-9 col-xs-2 col-xs-offset-9" style="padding-top: 40px;">
-				<button class="btn btn-default btn-lg" ng-click="go('/sixth')">Go Back</button>
 			</div>
 			
 		</div>
@@ -39,18 +40,18 @@
 				<h4>5. Do you need Search functionality? : "{{choices[6]}}"</h4>
 			</div>
 			<div class="col-md-12 ques">
-				<h2>6. Do you need a payment system?</h2>
+				<button class="pull-right btn btn-default btn-lg glyphicon glyphicon-chevron-left" ng-click="go('/sixth')"><em>Back</em></button>
+				<h2 class="pull-left">6. Do you need a payment system?</h2>
 			</div>
 			<div class="choices">
 				<div class="col-md-6 col-sm-6 col-xs-6 text-center">
-					<button class="btn btn-info btn-circle btn-xl center" ng-click="go('/eighth',2500,7,'Yes')">Yes</button>
+					<button id="icn" class="btn btn-info btn-circle btn-xl center glyphicon glyphicon-ok" ng-click="go('/eighth',2500,7,'Yes')"></button>
+					<span class="clearfix">Yes</span>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-6 text-center">
-					<button class="btn btn-danger btn-circle btn-xl center" ng-click="go('/eighth',0,7,'No')">No</button>
+					<button id="icn" class="btn btn-danger btn-circle btn-xl center glyphicon glyphicon-remove" ng-click="go('/eighth',0,7,'No')"></button>
+					<span class="clearfix">No</span>
 				</div>
-			</div>
-			<div class="col-md-2 col-md-offset-9 col-sm-2 col-sm-offset-9 col-xs-2 col-xs-offset-9" style="padding-top: 40px;">
-				<button class="btn btn-default btn-lg" ng-click="go('/sixth')">Go Back</button>
 			</div>
 		</div>
 		
