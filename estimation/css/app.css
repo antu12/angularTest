@@ -1,3 +1,6 @@
+.container{
+  padding-bottom: 10%;
+}
 .logo-wrapper{
 	margin: 20px;
 }
@@ -47,7 +50,7 @@
   /*padding: 10px 16px;*/
   font-size: 24px;
   line-height: 1.33;
-  border-radius: 40px;
+  border-radius: 100%;
 }
 .choices{
 	margin-top: 150px;
@@ -73,7 +76,7 @@
 }
 
 #icn{
-  font-size: 60px;
+  font-size: 70px;
 }
 
 .navbar{
@@ -81,12 +84,92 @@
   background-color: #ffffff;
 }
 body{
+  font-family: Bree Serif;
   background-color: #F5F4F4;
+
+
 }
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px !important;  /* 50% of your logo width */
+    display: block;
+} 
+
 .thumbnail{
   background-color: #F5F4F4;
 }
 
-.btn{
-  /*color:#074774;*/
+#hid{
+  text-align: center;
+  display: none;
+  color: blue;
+  font-weight: bold;
+  background-color: white;
+  width: 40%;
+  height: 20px;
+  box-shadow: 10px 10px 5px #888888;
+
+  position: relative;
+  -webkit-animation: mymove 1s ; /* Safari 4.0 - 8.0 */
+    animation: mymove 1s ;
+}
+
+#icn:hover{
+  font-size: 90px;
+  background-color: #074774;
+  color: white;
+  border: 1px solid #074774;
+  box-shadow: inset 50px 25px 100px #000;
+}
+
+
+@-webkit-keyframes mymove {
+    from {bottom: : -50px;}
+    to {bottom: : 0px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {bottom: -50px;}
+    to {bottom: 0px;}
+}
+
+.btnd{
+  background-color: #43646B;
+  color: white;
+  border: 1px solid #43646B;
+}
+
+
+.tooltiptext,.tooltiptext2 {
+    display: none;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 102%;
+}
+.tooltiptext{
+  left: 34%;
+}
+.tooltiptext2{
+  left: 39.5%;
+}
+.tooltiptext::after,.tooltiptext2::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.btnd:hover~.tooltiptext,.btnd:hover~.tooltiptext2 {
+    display: block;
 }

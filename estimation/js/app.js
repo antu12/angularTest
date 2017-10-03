@@ -113,6 +113,8 @@ app.factory('priceService', function() {
 				estimate = "$"+total + " - $" + (total+1290);
 			} else if (total > 20000 && total <= 25000) {
 				estimate = "$"+total + " - $" + (total+1390);
+			} else if (total > 25000 && total <= 30000) {
+				estimate = "$"+total + " - $" + (total+1490);
 			}
 			return estimate;
 		}
@@ -126,7 +128,8 @@ app.controller('pageCtrl', function($scope, $location, priceService) {
 	$scope.allPrice = priceService.getAllPrice();
 	$scope.choices = priceService.getChoice();
 	$scope.estimate = priceService.estimate();
-	// console.log($scope.choices);
+	// console.log($scope.allPrice);
+	// console.log($scope.price);
 
 	if ($scope.choices[0] != "start") {
 		$location.path('/landing');

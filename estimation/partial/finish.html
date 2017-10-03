@@ -3,14 +3,17 @@
             	{{price | currency}}
             </div> -->
 		<div ng-if="choices[1]=='mobile'" class="row">
-			<div class="col-md-12">
-				<h4>1. In Which phase your project currently at? : "{{choices[2]}}"</h4>
-				<h4>2. What type of design do you need? : "{{choices[3]}}"</h4>
-				<h4>3. Do you need your users to sign in? : "{{choices[4]}}"</h4>
-				<h4>4. Do you need a payment system? : "{{choices[5]}}"</h4>
-				<h4>5. What is your platform? : "{{choices[6]}}"</h4>
-				<h4>6. Need more additional feature? : "{{choices[7]}}"</h4>
-			</div>
+			<div class="panel panel-default">
+            		<!-- List group -->
+            	<ul class="list-group">
+            		<li class="list-group-item"><h4>1. In Which phase your project currently at? : <strong>"{{choices[2]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>2. What type of design do you need? : <strong>"{{choices[3]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>3. Do you need your users to sign in? : <strong>"{{choices[4]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>4. Do you need a payment system? : <strong>"{{choices[5]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>5. What is your platform? : <strong>"{{choices[6]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>6. Need more additional feature? : <strong>"{{choices[7]}}"</strong></h4></li>
+           		</ul>
+            </div>
 			<div class="col-md-12"><hr></div>
 			<div class="col-md-12">
 				<h3>Your Total Estimate Cost is : {{estimate}}</h3>
@@ -25,15 +28,18 @@
 		</div>
 
 		<div ng-if="choices[1]=='web'" class="row">
-			<div class="col-md-12">
-				<h4>1. How many pages do you need? : "{{choices[2]}}"</h4>
-				<h4>2. Do you need CMS? : "{{choices[3]}}"</h4>
-				<h4>3. Do you need your users to sign in? : "{{choices[4]}}"</h4>
-				<h4>4. Do users need a profile? : "{{choices[5]}}"</h4>
-				<h4>5. Do you need Search functionality? : "{{choices[6]}}"</h4>
-				<h4>6. Do you need a payment system? : "{{choices[7]}}"</h4>
-				<h4>7. Need more additional feature? : "{{choices[8]}}"</h4>
-			</div>
+			<div class="panel panel-default">
+            		<!-- List group -->
+           		<ul class="list-group">
+           			<li class="list-group-item"><h4>1. How many pages do you need? : <strong>"{{choices[2]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>2. Do you need CMS? : <strong>"{{choices[3]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>3. Do you need your users to sign in? : <strong>"{{choices[4]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>4. Do users need a profile? : <strong>"{{choices[5]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>5. Do you need Search functionality? : <strong>"{{choices[6]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>6. Do you need a payment system? : <strong>"{{choices[7]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>7. Need more additional feature? : <strong>"{{choices[8]}}"</strong></h4></li>
+           		</ul>
+            </div>
 			<div class="col-md-12"><hr></div>
 			<div class="col-md-12">
 				<h3>Your Total Estimate Cost is : {{estimate}}</h3>

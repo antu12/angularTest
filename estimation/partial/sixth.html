@@ -3,51 +3,61 @@
             	{{price | currency}}
             </div> -->
 		<div ng-if="choices[1]=='mobile'" class="row">
-			<div class="col-md-12">
-				<h4>1. In Which phase your project currently at? : "{{choices[2]}}"</h4>
-				<h4>2. What type of design do you need? : "{{choices[3]}}"</h4>
-				<h4>3. Do you need your users to sign in? : "{{choices[4]}}"</h4>
-				<h4>4. Do you need a payment system? : "{{choices[5]}}"</h4>
-			</div>
+			<div class="panel panel-default">
+            		<!-- List group -->
+            	<ul class="list-group">
+            		<li class="list-group-item"><h4>1. In Which phase your project currently at? : <strong>"{{choices[2]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>2. What type of design do you need? : <strong>"{{choices[3]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>3. Do you need your users to sign in? : <strong>"{{choices[4]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>4. Do you need a payment system? : <strong>"{{choices[5]}}"</strong></h4></li>
+           		</ul>
+            </div>
 			<div class="col-md-12 ques">
 				<button class="pull-right btn btn-default btn-lg glyphicon glyphicon-chevron-left" ng-click="go('/fifth')"><em>Back</em></button>
 				<h2 class="pull-left">5. What is your platform?</h2>
 			</div>
 			<div class="choices">
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button id="icn" class="btn btn-info btn-circle btn-xl center fa fa-android" ng-click="go('/seventh',5000,6,'Android')"></button>
+					<button id="icn" class="btn btnd btn-info btn-circle btn-xl center fa fa-android" ng-click="go('/seventh',5000,6,'Android')"></button>
 					<span class="clearfix">Android</span>
+					<span class="tooltiptext">$5000.00</span>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button id="icn" class="btn btn-danger btn-circle btn-xl center fa fa-apple" ng-click="go('/seventh',6500,6,'IOS')"></button>
+					<button id="icn" class="btn btnd btn-danger btn-circle btn-xl center fa fa-apple" ng-click="go('/seventh',6500,6,'IOS')"></button>
 					<span class="clearfix">IOS</span>
+					<span class="tooltiptext">$6500.00</span>
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 text-center">
-					<button id="icn" class="btn btn-success btn-circle btn-xl center fa fa-mobile" ng-click="go('/seventh',11000,6,'Android and IOS')"></button>
+					<button id="icn" class="btn btnd btn-success btn-circle btn-xl center fa fa-mobile" ng-click="go('/seventh',11000,6,'Android and IOS')"></button>
 					<span class="clearfix">Android and IOS</span>
+					<span class="tooltiptext">$11000.00</span>
 				</div>
 			</div>
 			
 		</div>
 
 		<div ng-if="choices[1]=='web'" class="row">
-			<div class="col-md-12">
-				<h4>1. How many pages do you need? : "{{choices[2]}}"</h4>
-				<h4>2. Do you need CMS? : "{{choices[3]}}"</h4>
-				<h4>3. Do you need your users to sign in? : "{{choices[4]}}"</h4>
-				<h4>4. Do users need a profile? : "{{choices[5]}}"</h4>
-			</div>
+			<div class="panel panel-default">
+            		<!-- List group -->
+           		<ul class="list-group">
+           			<li class="list-group-item"><h4>1. How many pages do you need? : <strong>"{{choices[2]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>2. Do you need CMS? : <strong>"{{choices[3]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>3. Do you need your users to sign in? : <strong>"{{choices[4]}}"</strong></h4></li>
+           			<li class="list-group-item"><h4>4. Do users need a profile? : <strong>"{{choices[5]}}"</strong></h4></li>
+           		</ul>
+            </div>
 			<div class="col-md-12 ques">
 				<button class="pull-right btn btn-default btn-lg glyphicon glyphicon-chevron-left" ng-click="go('/fifth')"><em>Back</em></button>
 				<h2 class="pull-left">5. Do you need Search functionality?</h2>
 			</div>
 			<div class="choices">
 				<div class="col-md-6 col-sm-6 col-xs-6 text-center">
-					<button id="icn" class="btn btn-info btn-circle btn-xl center  glyphicon glyphicon-ok" ng-click="go('/seventh',2500,6,'Yes')"></button>
+					<button id="icn" class="btn btnd btn-info btn-circle btn-xl center  glyphicon glyphicon-ok" ng-click="go('/seventh',2500,6,'Yes')"></button>
 					<span class="clearfix">Yes</span>
+					<span class="tooltiptext2">$2500.00</span>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-6 text-center">
-					<button id="icn" class="btn btn-danger btn-circle btn-xl center glyphicon glyphicon-remove" ng-click="go('/seventh',0,6,'No')"></button>
+					<button id="icn" class="btn btnd btn-danger btn-circle btn-xl center glyphicon glyphicon-remove" ng-click="go('/seventh',0,6,'No')"></button>
 					<span class="clearfix">No</span>
 				</div>
 			</div>
