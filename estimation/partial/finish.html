@@ -2,7 +2,13 @@
 			<!-- <div class="pull-right price">
             	{{price | currency}}
             </div> -->
-		<div ng-if="choices[1]=='mobile'" class="row">
+		<div ng-if="choices[1]=='mobile'" class="row col-md-6">
+
+			<div class="well well-sm text-center">
+				<h4>Your Total Estimated Cost is :</h4>
+				<h3>{{estimate}}</h3>
+			</div>
+
 			<div class="panel panel-default">
             		<!-- List group -->
             	<ul class="list-group">
@@ -15,19 +21,22 @@
            		</ul>
             </div>
 			<div class="col-md-12"><hr></div>
-			<div class="col-md-12">
-				<h3>Your Total Estimate Cost is : {{estimate}}</h3>
-			</div>
+			
 			<div class="end">
 				<div class="col-md-12 col-sm-12 col-xs-12 text-center">
-					<button class="btn btn-primary btn-lg btn-block center" ng-click="reload()">Reset Calculation</button>
+					<button class="btn btns btn-lg btn-block center" ng-click="reload()">Reset Calculation</button>
 				</div>
 			</div>
 			
 			
 		</div>
 
-		<div ng-if="choices[1]=='web'" class="row">
+		<div ng-if="choices[1]=='web'" class="row col-md-6">
+			<div class="well well-lg text-center">
+				<h4>Your Total Estimated Cost is :</h4>
+				<h3>{{estimate}}</h3>
+			</div>
+
 			<div class="panel panel-default">
             		<!-- List group -->
            		<ul class="list-group">
@@ -41,15 +50,48 @@
            		</ul>
             </div>
 			<div class="col-md-12"><hr></div>
-			<div class="col-md-12">
-				<h3>Your Total Estimate Cost is : {{estimate}}</h3>
-			</div>
+			
 			<div class="end">
 				<div class="col-md-12 col-sm-12 col-xs-12 text-center">
-					<button class="btn btn-primary btn-lg btn-block center" ng-click="reload()">Reset Calculation</button>
+					<button class="btn btns btn-lg btn-block center" ng-click="reload()">Reset Calculation</button>
 				</div>
 			</div>
 			
 		</div>
+
+		<div class=" well well-lg col-md-5 col-md-offset-1">
+			<form id="mailForm" onsubmit="return formSubmit()">
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+				</div>
+
+				<div class="form-group">
+					<label for="email">Email address</label>
+					<input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+				</div>
+
+				<div class="form-group">
+					<label for="phone">Phone</label>
+					<input type="tel" class="form-control" id="phone" placeholder="Enter Phone" required>
+				</div>
+
+				<div class="form-group">
+					<label for="message">Message</label>
+					<textarea class="form-control" rows="5" id="message" required> </textarea>
+				</div>
+
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="checkbox" id="disclosure" class="form-check-input">
+						Send me Non Disclosure Agreement to protect my ideas.
+					</label>
+				</div>
+
+				<input type="submit" id="button" class="btn btns btn-primary btn-block"></input>
+			</form>
+		</div>
+	</div>
 		
 	</div>
+
