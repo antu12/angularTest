@@ -50,6 +50,10 @@ app.config(function($routeProvider) {
 		templateUrl:"partial/webdev.html",
 		controller:"webdevCtrl"
 	})
+	.when("/webdev-finish", {
+		templateUrl:"partial/webdevfin.html",
+		controller:"webdevfinCtrl"
+	})
 	.otherwise({
 		redirectTo:"/landing"
 	});
@@ -322,19 +326,42 @@ app.factory('webdevService', function() {
 		status:false
 	},
 	];
+	var selected = [];
+	var totalfin = 0;
+	var state = false;
 	return{
 		getitems: function() {
 			return features;
+		},
+		add: function(input) {
+			selected = input;
+			totalfin = 0;
+			for (var i = 0; i < selected.length; i++) {
+			totalfin += selected[i].price;
+			}
+			state=true;
+		},
+		getAll: function() {
+			return selected;
+		},
+		getTotal: function() {
+			return totalfin;
+		},
+		getState: function() {
+			return state;
 		}
 	}
 
 });
 
 app.controller('webdevCtrl', function($scope, $location, webdevService) {
+	
 	$scope.items = webdevService.getitems();
-	$scope.total=0;
+	$scope.total=webdevService.getTotal();
 	// console.log($scope.items);
-	$scope.added = [];
+	$scope.added =  webdevService.getAll();
+	
+
 
 	$scope.toggle = function (item) {
 		
@@ -366,10 +393,33 @@ app.controller('webdevCtrl', function($scope, $location, webdevService) {
 		}
 		$scope.total = sum;
 	};
+	$scope.filled = function() {
+		if ($scope.added.length >=1 ) {
+			return true;
+		}else{
+			return false;
+		}
+	};
 	$scope.go = function(path) {
+		webdevService.add($scope.added);
 		$location.path(path);
 	};
+	
 
 
 });
 
+app.controller('webdevfinCtrl', function($scope, $location, webdevService){
+	$scope.fin = webdevService.getAll();
+	$scope.total=webdevService.getTotal();
+
+	// console.log(webdevService.getState());
+	if (!webdevService.getState()) {
+		$location.path('/landing');
+	}
+	$scope.reload = function() {
+		$scope.fin = [];
+		$scope.total=0;
+		$location.path('/webdev');
+	};
+});

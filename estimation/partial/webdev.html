@@ -23,7 +23,7 @@
 			</ul>
 		</div>
 
-		<div class="col-md-4 col-sm-12 clearfix">
+		<div class=" container col-md-4 col-sm-12 clearfix">
 			<h3>Selected Features</h3><hr>
 			<ul class="list-unstyled">
 			<li ng-repeat="item in added" class="">
@@ -37,6 +37,9 @@
 			<div style="font-size: 20px">
 				<span style="float: left;">Total:</span>
 				<span style="float: right;">USD: {{total}}</span>
+			</div>
+			<div ng-show="filled()" style="margin-top: 50px">
+				<button class="btn btns btn-lg btn-block center" ng-click="go('webdev-finish')">Next</button>
 			</div>
 		</div>
 	</div>
