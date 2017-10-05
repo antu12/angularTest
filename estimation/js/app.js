@@ -378,13 +378,13 @@ app.controller('webdevCtrl', function($scope, $location, webdevService) {
 	$scope.add = function (item) {
 		$scope.added.push(item);
 		$scope.count();
-		console.log($scope.added);
+		// console.log($scope.added);
 	};
 	$scope.remove = function (item) {
 		var index =$scope.added.indexOf(item);
 		$scope.added.splice(index, 1);
 		$scope.count();
-		console.log($scope.added);
+		// console.log($scope.added);
 	};
 	$scope.count = function() {
 		var sum = 0;
