@@ -2,7 +2,7 @@
 			<!-- <div class="pull-right price">
             	{{price | currency}}
             </div> -->
-            <div ng-if="choices[1]=='mobile'" class="row col-md-6">
+            <div ng-if="choices[1]=='mobile'" class="container row col-md-6">
 
             	<div class="well well-sm text-center">
             		<h4>Your Total Estimated Cost is :</h4>
@@ -20,18 +20,26 @@
             			<li class="list-group-item"><h4>6. Need more additional feature? : <strong>"{{choices[7]}}"</strong></h4></li>
             		</ul>
             	</div>
-            	<div class="col-md-12"><hr></div>
+            	<!-- <div class="col-md-12"><hr></div> -->
             	
             	<div class="end">
             		<div class="col-md-12 col-sm-12 col-xs-12 text-center">
-            			<button class="btn btns btn-lg btn-block center" ng-click="reload()">Reset Calculation</button>
+            			<button class="btn btns btn-block center" ng-click="reload()">Reset Calculation</button>
             		</div>
             	</div>
-            	
-            	
+                  <div class="col-md-12 col-sm-12 col-xs-12 text-center" style="margin-top: 10px">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                              <button class="btn btns btn-block center" onclick="window.print()"><i class="fa fa-print"></i>&nbsp;Print</button>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                              <button class="btn btns btn-block center" onclick="savePdf()"><i class="fa fa-file-pdf-o"></i>&nbsp;Save Pdf</button>
+                        </div>
+                  </div>
+
+
             </div>
 
-            <div ng-if="choices[1]=='web'" class="row col-md-6">
+            <div ng-if="choices[1]=='web'" class="container row col-md-6">
             	<div class="well well-lg text-center">
             		<h4>Your Total Estimated Cost is :</h4>
             		<h3>{{estimate}}</h3>
@@ -49,14 +57,22 @@
             			<li class="list-group-item"><h4>7. Need more additional feature? : <strong>"{{choices[8]}}"</strong></h4></li>
             		</ul>
             	</div>
-            	<div class="col-md-12"><hr></div>
+            	<!-- <div class="col-md-12"><hr></div> -->
             	
             	<div class="end">
             		<div class="col-md-12 col-sm-12 col-xs-12 text-center">
-            			<button class="btn btns btn-lg btn-block center" ng-click="reload()">Reset Calculation</button>
+            			<button class="btn btns btn-block center" ng-click="reload()">Reset Calculation</button>
             		</div>
             	</div>
-            	
+                  <div class="col-md-12 col-sm-12 col-xs-12 text-center" style="margin-top: 10px">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                              <button class="btn btns btn-block center" onclick="window.print()"><i class="fa fa-print"></i>&nbsp; Print</button>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                              <button class="btn btns btn-block center" onclick="savePdf()"><i class="fa fa-file-pdf-o"></i>&nbsp; Save Pdf</button>
+                        </div>
+                  </div>
+
             </div>
 
             <div class=" well well-lg col-md-5 col-md-offset-1">
@@ -91,7 +107,7 @@
             		<input type="submit" id="button" class="btn btns btn-primary btn-block"></input>
             	</form>
             </div>
-        </div>
-        
-    </div>
+      </div>
+
+</div>
 

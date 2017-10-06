@@ -3,7 +3,7 @@
             	{{price | currency}}
             </div> -->
     <div class=" container row col-md-6">
-
+		<div id="print">
     	<div class="well well-sm text-center">
     		<h4>Your Total Estimated Cost is :</h4>
     		<h3>{{total | currency}}</h3>
@@ -17,11 +17,21 @@
     			</li>
     		</ul>
     	</div>
-    	<div class="col-md-12"><hr></div>
+
+    	</div>
+    	<!-- <div class="col-md-12"><hr></div> -->
 
     	<div class="end">
     		<div class="col-md-12 col-sm-12 col-xs-12 text-center">
-    			<button class="btn btns btn-lg btn-block center" ng-click="reload()"><i class="fa fa-long-arrow-left"></i> Back to Selection</button>
+    			<button class="btn btns btn-block center" ng-click="reload()"><i class="fa fa-long-arrow-left"></i> &nbsp;Back to Selection</button>
+    		</div>
+    	</div>
+    	<div class="col-md-12 col-sm-12 col-xs-12 text-center" style="margin-top: 10px">
+    		<div class="col-md-6 col-sm-6 col-xs-6">
+    			<button class="btn btns btn-block center" onclick="window.print()"><i class="fa fa-print"></i>&nbsp;Print</button>
+    		</div>
+    		<div class="col-md-6 col-sm-6 col-xs-6">
+    			<button class="btn btns btn-block center" onclick="savePdf()"><i class="fa fa-file-pdf-o"></i>&nbsp;Save Pdf</button>
     		</div>
     	</div>
 

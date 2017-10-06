@@ -56,7 +56,7 @@
 	margin-top: 150px;
 }
 .end{
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .ques{
   text-align: center;
@@ -199,7 +199,7 @@ body{
   box-shadow: inset 5px 6px 35px #000;
 }
 
-.btns:hover{
+.btns:hover, .btns:focus, .btns.active {
   background-color: #43646B;
   color: white;
   border: 1px solid #43646B;
@@ -213,3 +213,14 @@ body{
   background-color: #fdfdfd;
 }
 
+@media print {
+
+  .jq-toast-wrap * {
+    visibility: hidden;
+  }
+  #print, #print * {
+    visibility: visible;
+    -webkit-print-color-adjust: exact; 
+  }
+  
+}
