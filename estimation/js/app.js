@@ -159,13 +159,13 @@ app.controller('pageCtrl', function($scope, $location, priceService) {
 					'What is your platform?',
 					'Need more additional feature?'];
 		var doc = new jsPDF('p', 'mm', [210,297]);
-			doc.setFontSize(20);
+			doc.setFontSize(16);
 			doc.addImage(printed, 'JPEG', 0, 0, 210, 297);
 			
-			doc.text(85, 83, $scope.estimate);
+			doc.text(35, 83, "For Mobile App: "+$scope.estimate);
 			var h = 115;
 			var str = "";
-			doc.setFontSize(14);
+			doc.setFontSize(12);
 			for (var i = 0; i < ques.length; i++) {
 				str = (i+1)+". "+(ques[i]).toUpperCase()+": '"+$scope.choices[i+2]+"'";
 				doc.text(35, h, str);
@@ -182,13 +182,13 @@ app.controller('pageCtrl', function($scope, $location, priceService) {
 					'Do you need a payment system?',
 					'Need more additional feature?'];
 		var doc = new jsPDF('p', 'mm', [210,297]);
-			doc.setFontSize(20);
+			doc.setFontSize(16);
 			doc.addImage(printed, 'JPEG', 0, 0, 210, 297);
 			
-			doc.text(85, 83, $scope.estimate);
+			doc.text(35, 83, "For Web/CMS Design: "+$scope.estimate);
 			var h = 115;
 			var str = "";
-			doc.setFontSize(14);
+			doc.setFontSize(12);
 			for (var i = 0; i < ques.length; i++) {
 				str = (i+1)+". "+(ques[i]).toUpperCase()+": '"+$scope.choices[i+2]+"'";
 				doc.text(35, h, str);
@@ -472,7 +472,7 @@ app.controller('webdevfinCtrl', function($scope, $window, $location, webdevServi
 			doc.setFontSize(20);
 			doc.addImage(printed, 'JPEG', 0, 0, 210, 297);
 			var estimate = "$"+$scope.total.toString()+".00";
-			doc.text(85, 83, estimate);
+			doc.text(85, 83, "For Web App: "+estimate);
 			var h = 115;
 			doc.setFontSize(12);
 			for (var i = 0; i < $scope.fin.length; i++) {
