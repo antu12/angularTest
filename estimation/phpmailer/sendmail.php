@@ -6,20 +6,20 @@ $mail = new PHPMailer;
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'ssl://smtp.gmail.com';       //  ssl://smtp.gmail.com          // Specify main and backup SMTP servers
+$mail->Host = 'box5122.bluehost.com';       //  ssl://smtp.gmail.com          // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'arshad.antu';                      // SMTP username
-$mail->Password = 'Antu281292G';                           // SMTP password
+$mail->Username = 'support@coreibytes.com';                      // SMTP username
+$mail->Password = 'Marvin2012$';                           // SMTP password
 $mail->SMTPSecure = 'ssl';  //TLS                      // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;          //587                          // TCP port to connect to
 
 
 //echo $email= $_POST['n2']."@".$_POST['n3'];
-$mail->setFrom('arshad.antu@gmail.com', 'Arshad');
+$mail->setFrom('support@coreibytes.com', 'CoreiBytes Codevelop');
 //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
 $mail->addAddress($_POST['email']);               // Name is optional
 //$mail->addReplyTo('$email','roshan');
-$mail->addCC('arshad12@outlook.com');
+$mail->addCC('support@coreibytes.com');
 //$mail->addBCC('bcc@example.com');
 
 //File convert
@@ -33,7 +33,7 @@ $mail->addStringAttachment($base, 'agreement.pdf');
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Mail Test';
+$mail->Subject = 'CoreiBytes Estimate Form Submission';
 $mail->Body    = 
    
     '<div align="center"><div align="center" style="
@@ -70,7 +70,7 @@ $mail->Body    =
     height:auto;
     overflow:hidden;
     ">
-    <h4 style="color:#fff;">Powered by, <a href="http://arshadhossain.me" style="color:#ffc78e;">Arshad</a></h4></div>
+    <h4 style="color:#fff;">Powered by, <a href="http://coreibytes.com" style="color:#ffc78e;">CoreiBytes Codevelop</a></h4></div>
     </div></div>';
 //file_get_contents('template-guest.php');
 $mail->AltBody = 'Hello';

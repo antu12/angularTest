@@ -6,20 +6,20 @@ $mail = new PHPMailer;
 $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'ssl://smtp.gmail.com';       //  ssl://smtp.gmail.com          // Specify main and backup SMTP servers
+$mail->Host = 'box5122.bluehost.com';       //  ssl://smtp.gmail.com          // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'arshad.antu';                      // SMTP username
-$mail->Password = 'Antu281292G';                           // SMTP password
+$mail->Username = 'support@coreibytes.com';                      // SMTP username
+$mail->Password = 'Marvin2012$';                             // SMTP password
 $mail->SMTPSecure = 'ssl';  //TLS                      // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;          //587                          // TCP port to connect to
 
 
 //echo $email= $_POST['n2']."@".$_POST['n3'];
-$mail->setFrom('arshad.antu@gmail.com', 'Arshad');
+$mail->setFrom('support@coreibytes.com', 'CoreiBytes Codevelop');
 //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
-$mail->addAddress('arshad.antu@gmail.com');               // Name is optional
+$mail->addAddress($_POST['email']);               // Name is optional
 //$mail->addReplyTo('$email','roshan');
-//$mail->addCC('passmethecode@gmail.com');
+$mail->addCC('support@coreibytes.com');
 //$mail->addBCC('bcc@example.com');
 
 //File convert
@@ -33,45 +33,37 @@ $mail->addAddress('arshad.antu@gmail.com');               // Name is optional
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Mail Test';
+$mail->Subject = 'CoreiBytes Estimate Form Submission';
 $mail->Body    = 
    
-    '<div align="center"><div align="center" style="
-    display:inline-block;
-    background-color:#d48331;
-    height:auto;
-    width:auto;
-    ">
-       <div style="
-       background-color:rgba(198, 52, 52, 0.95);
-       display:inline-block;
-       width:100%;
-       height:100px;
-       text-align:center;
-       color:#fff;
-       align-content:center;
-       "><h1 style="
-       margin-top:40px;
-       ">Form Details</h1>
-       </div>
-       <table style="background-color:rgb(255, 249, 249); color: #4a4646; margin:0px; padding:20px;">
-       <tr>
-       <td>Name :</td><td><h3>'.$_POST['name'].
-       '</h3></td></tr><tr><td>Email :</td><td><h3 text-decoration="none">'.$_POST['email'].
-       '</h3></td></tr><tr><td>Phone :</td><td><h3>'.$_POST['phone'].
-       // '</h3></td></tr><tr><td>Number of rooms :</td><td><h3>'.$_POST['rooms'].
-       '</h3></td></tr><tr><td>Message :</td><td><h3>'.$_POST['message'].
-       
-    '</h3></td></tr>
-    </table>
-    <div text-align="center" style="
-    background-color:rgb(109, 160, 212);
-    padding:5px;
-    height:auto;
-    overflow:hidden;
-    ">
-    <h4 style="color:#fff;">Powered by, <a href="arshadhossain.me" style="color:#ffc78e;">Arshad</a></h4></div>
-    </div></div>';
+    '<div align="center"><div align="center" style=" display:inline-block; background-color:#d48331; height:auto; width:auto;">
+      <div style="background-color:rgba(198, 52, 52, 0.95); display:inline-block; width:100%; height:100px; text-align:center; color:#fff; align-content:center;">
+          <h1 style="margin-top:40px;">Form Details</h1>
+      </div>
+      <table style="background-color:rgb(255, 249, 249); color: #4a4646; margin:0px; padding:20px;">
+          <tr>
+            <td>Name :</td>
+              <td><h3>'.$_POST['name'].'</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>Email :</td>
+            <td>
+              <h3 text-decoration="none">'.$_POST['email'].'</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>Phone :</td>
+            <td><h3>'.$_POST['phone'].'</h3></td>
+          </tr>
+          <tr>
+            <td>Message :</td><td><h3>'.$_POST['message'].'</h3></td>
+          </tr>
+      </table>
+      <div text-align="center" style=" background-color:rgb(109, 160, 212); padding:5px; height:auto; overflow:hidden;">
+      <h4 style="color:#fff;">Powered by, <a href="http://coreibytes.com" style="color:#ffc78e;">CoreiBytes Codevelop</a></h4></div>
+      </div>
+    </div>';
 //file_get_contents('template-guest.php');
 $mail->AltBody = 'Hello';
 
