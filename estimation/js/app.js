@@ -472,12 +472,12 @@ app.controller('webdevfinCtrl', function($scope, $window, $location, webdevServi
 			doc.setFontSize(20);
 			doc.addImage(printed, 'JPEG', 0, 0, 210, 297);
 			var estimate = "$"+$scope.total.toString()+".00";
-			doc.text(85, 83, "For Web App: "+estimate);
+			doc.text(35, 83, "For Web App: "+estimate);
 			var h = 115;
 			doc.setFontSize(12);
 			for (var i = 0; i < $scope.fin.length; i++) {
 				doc.text(35, h, (i+1).toString()+". "+($scope.fin[i].name).toUpperCase());
-				doc.text(85, h, $scope.fin[i].price.toString());
+				doc.text(86, h, $scope.fin[i].price.toString());
 				h+=5;
 			}
 			doc.save('coreibytes_estimate.pdf');
