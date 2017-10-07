@@ -117,7 +117,7 @@ app.factory('priceService', function() {
 				estimate = "$"+total + " - $" + (total+1290);
 			} else if (total > 20000 && total <= 25000) {
 				estimate = "$"+total + " - $" + (total+1390);
-			} else if (total > 25000 && total <= 30000) {
+			} else if (total > 25000) {
 				estimate = "$"+total + " - $" + (total+1490);
 			}
 			return estimate;
